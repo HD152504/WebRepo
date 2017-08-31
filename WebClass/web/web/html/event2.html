@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event</title>
+    <style>
+        .bgYellow {
+            background-color: yellow;
+        }
+        .bgBlue {
+            background-color: blue;
+            color: white;
+        }
+        .bgWhite {
+            background-color: white;
+        }
+        #word {
+            margin-left: 20px;
+            float: left;
+        }
+        .border { border: 3px solid red; }
+    </style>
+    <script>
+        function changeColor(color) {
+            console.log(color);
+            var c = document.getElementById("container");
+            c.setAttribute("class", color);     //  <div id="container" class="bgYellow"></div>
+        }
+        function toUpperCase(e) {
+
+//            var word = document.getElementById("word");    this를 넘기면 this와 이문장이 동일하다.
+            e.value = word.value.toUpperCase();
+        }
+        function addBorder(e) {
+//            var x = document.getElementById("box");
+            e.setAttribute("class", "border");  //  <p id="box" class="border"></p>
+        }
+        function removeBorder(e) {
+//            var x = document.getElementById("box");
+            e.removeAttribute("class");         //  <p id="box">
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <input type="radio" name="color" onclick="changeColor('bgYellow');"> 노란색
+        <input type="radio" name="color" onclick="changeColor('bgBlue');"> 파란색
+        <input type="radio" name="color" onclick="changeColor('bgWhite');"> 원래대로
+        <br><br>
+        <input type="text" id="word" onchange="toUpperCase(this);">
+        <br><br>
+        <div id="box" onmouseover="addBorder(this);" onmouseout="removeBorder(this);">
+            마우스를 위에 올려 보세요!
+        </div>
+    </div>
+
+</body>
+</html>

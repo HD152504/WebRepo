@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        li {
+            list-style-type: square;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>프로필</h1>
+    <p id="profile"></p>
+    <script>
+        id = "2301";
+        name = "홍길동";
+        age = 18;
+        height = 174.7;
+        hobby = ["농구", "게임"];
+
+
+
+        console.log(typeof id);
+        console.log(typeof age);
+        console.log(typeof hobby);
+        console.log(typeof document.getElementById("profile").innerHTML);
+        document.getElementById("profile").innerHTML =
+            "<ul><li>학번 : " + id + "</li>" +
+            "<li>이름 : " + name + "</li>" +
+            "<li>나이 : " + age + "세</li>" +
+            "<li>키 : " + height + "cm</li>" +
+            "<li>취미 : " + hobby + "</li></ul>";
+    </script>
+</body>
+</html>
