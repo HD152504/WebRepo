@@ -1,4 +1,4 @@
-package dimigo.vo;
+package org.dimigo.vo;
 
 public class UserVO {
     private String id;

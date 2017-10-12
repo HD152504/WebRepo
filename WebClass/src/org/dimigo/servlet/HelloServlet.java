@@ -1,4 +1,4 @@
-package dimigo.servlet;
+package org.dimigo.servlet;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

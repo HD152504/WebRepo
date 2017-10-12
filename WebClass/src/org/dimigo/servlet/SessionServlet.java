@@ -1,4 +1,4 @@
-package dimigo.servlet;
+package org.dimigo.servlet;
 
 
 import org.dimigo.vo.UserVO;
