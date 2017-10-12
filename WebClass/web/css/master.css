@@ -1,0 +1,258 @@
+body {
+    height: 100%;
+    overflow: hidden;
+    background:url("../image/backgroundimg.jpeg");
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+a.navbartext {
+    float: left;
+    margin-right: 20px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 20px;
+    /*font-weight:bold;*/
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;;
+    color: rgba(255,255,255,.5);
+    text-decoration: none;
+}
+a.navbartext:hover {
+    /*text-decoration-color: lightgray;*/
+    color: white;
+}
+a.navbartext:visited {
+    text-decoration: none;
+}
+.navdiv {
+    /*padding: 8px;*/
+}
+
+.navbar-brand {
+    font-size : 1.7rem;
+}
+
+.nav-link {
+    font-size : 1.25rem;
+}
+
+.btn-outline-light {
+    float: left;
+    margin-left: 20px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    line-height: 60px; /* Vertically center the text there */
+    background-color: #f5f5f5;
+}
+
+.modal-body {
+    padding: 30px;
+}
+
+#signinform {
+    padding: 50px;
+}
+
+.myinputD {
+    padding: 3%;
+    width: 100%;
+    border: 0.5px solid lightgray;
+    border-radius: 2px;
+}
+
+.modal-header {
+    display: block;
+}
+
+h4 {
+    margin-bottom:0px;
+}
+
+#loginB {
+    width: 81px;
+}
+
+.custom-select {
+    margin-left: 40px;
+    border-color: black;
+}
+
+.signUp {
+    margin-top:10px;
+    padding: 1.5%;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+h5 {
+    display: inline-block;
+}
+
+label {
+    font-size: 20px;
+}
+
+#name {
+    float: right;
+    margin-right: 20px;
+}
+
+#signUpid, #signUppwd {
+    float: right;
+    padding: 1.5%;
+    margin-right: 50px;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+
+.idcon {
+    padding: 10px 0px;
+}
+
+.footerCon {
+    text-align: center;
+}
+
+#loginB:hover { color:black; }
+
+#signUpB:hover { color:black !important;}
+
+#clickme:hover { color: white; }
+
+.jumbotron {
+    height: 100%;
+    text-align: center;
+}
+.jumbodiv {
+    margin-top: 170px;
+}
+html{
+    height:100%;
+}
+.modal-footer {
+    padding: 10px;
+}
+
+
+.banner {
+    color: white;
+    margin: 400px 480px 200px 480px;
+    text-align: center;
+    width: 40%;
+}
+
+#mainText {
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.myInfo {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 30px;
+    width: 700px;
+    height: 500px;
+    position: absolute;
+    top:18%;
+    bottom:18%;
+    left:30%;
+    right:30%;
+    font-family: "KoPub Dotum";
+    font-weight: 400;
+}
+
+.myinfo hr {
+    border: none;
+    height: 2px;
+    color: darkgray;
+    background-color: darkgray;
+}
+.infoHeader {
+    font-family: "나눔스퀘어";
+}
+
+.infoBody {
+    padding-top: 20px;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.jumbotron h1 {
+    font-family: "KoPub돋움체 Medium";
+}
+
+.jumbotron hr {
+    width: 90%;
+    border: none;
+    height: 0.1rem;
+    color: lightgray;
+    background-color: lightgray;
+}
+
+
+.favor {
+    font-family: "KoPub돋움체 Light";
+    margin-top: 30px;
+    display: inline-block;
+    padding-top: 30px;
+    background-color: rgba(255,255,255,0.3);
+    width: 20%;
+    height: 420px;
+    float: left;
+    margin-left: 65px;
+    font-size: 1.5rem;
+}
+
+.jumboBody {
+    margin-top: 30px;
+}
+
+.favor img {
+    height: 230px;
+    width: 300px;
+    margin-bottom: 40px;
+    /*padding-bottom: 15px;*/
+}
+
+.infoTitle {
+    display: inline-block;
+}
+
+#carouselExampleIndicators {
+    width: 65%;
+    margin: 0px 300px;
+}
+
+.display-4 {
+    margin-bottom: 50px;
+}
+
+.carousel-inner img {
+    height: 600px;
+}
+
+.jumbotron h2 {
+    margin-bottom: 20px;
+}
+
+#bucket {
+    padding-top: 32px;
+    /*margin-bottom: 30px;*/
+}
+
+.display-2 {
+    font-size: 3rem;
+}
+
+.dreamText {
+    font-size: 1.25rem;
+}
