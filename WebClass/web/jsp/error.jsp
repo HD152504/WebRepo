@@ -1,21 +1,21 @@
-<%@ page import="org.dimigo.vo.UserVO" %>
-<%@ page import="java.io.PrintWriter" %><%--
+<%--
   Created by IntelliJ IDEA.
   User: lg
-  Date: 2017-09-28
-  Time: 오후 12:45
+  Date: 2017-10-24
+  Time: 오전 11:06
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page isErrorPage="true" %>
+<!Doctype html>
 <html>
 <head>
     <title>Title</title>
 </head>
 <body>
 
-<h1>id : ${user.id}</h1>
-<h1>name : ${user.name}</h1>
-<h1>nickname : ${user.nickname}</h1>
+<h1>Exception : <%=exception.getClass().getName()%></h1>
+<h1>Message : <%=exception.getMessage()%></h1>
 
 </body>
 </html>
