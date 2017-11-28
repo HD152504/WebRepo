@@ -1,3 +1,7 @@
+
+    var offset=location.href.indexOf(location.host)+location.host.length;
+    var ctxPath=location.href.substring(offset,location.href.indexOf('/',offset+1));
+
 function mouseOn(e) {
     e.setAttribute("class", "nav-link active");
 }
@@ -7,59 +11,77 @@ function mouseOut(e) {
 }
 
 
-// $(document).on('hide.bs.modal','#loginchkModal', function () {
-//     console.log("닫힘");
-// });
-
-//     $(document).ready(function () {
-//         $("#signInForm").submit(function (event) {
-//             // submit이 자동으로 되는 기능을 막기
-//             event.preventDefault();
-//
-//             // id, pwd를 가져오기
-//             var id = $('#signInid').val();
-//             var pwd = $('#signInpwd').val();
-//             console.log("id : " + id + "\npwd : " + pwd);
-//             console.log("실행됨");
-//             // 서버로 post 전송 (ajax)
-//             $.post("http://httpbin.org/post", { "id" : id, "pwd" : pwd },
-//                 function(data) {
-// //                        alert(data.form.id + '님 로그인되었습니다.');
-//                     var loginchkModal = $('#loginchkModal');
-//                     var signInModal = $('#signInModal');
-//                     loginchkModal.modal();
-//                     loginchkModal.find('.modal-body').text(data.form.id + '님 로그인되었습니다.');
-//                     signInModal.modal('hide');
-//
-//                 });          // post방식으로 저 사이트에 post를 보내는데 json형식으로 입력한 값이 들어감
-//
-//         });
-//     });
-
-
 $(document).ready(function () {
     $("#signUpForm").submit(function (event) {
         // submit이 자동으로 되는 기능을 막기
         event.preventDefault();
 
         // id, pwd를 가져오기
-        var grade = $('input[type=radio][name=grade]:checked').val();
-        var cls = $('#class').val();
-        var num = $('#number').val();
-        var name = $('#name').val();
+        var name = $('#signUpname').val();
         var id = $('#signUpid').val();
         var pwd = $('#signUppwd').val();
+        var pwdchk = $('#signUppwdchk').val();
 
-        console.log("grade : " + grade + "\nclass : " + cls + "\nnum : " + num + "\nname : " + name + "\nid : " + id + "\npwd : " + pwd);
+        if (pwd != pwdchk) {
+            var Modal = $('#myModal');
+            var signUpModal = $('#signUpModal');
+            Modal.modal();
+            Modal.find('.modal-body').text("비밀번호가 다릅니다!");
+            signUpModal.modal('hide');
+
+            $("#myModal").on("hidden.bs.modal", function () {
+                $('#signUpid').val("");
+                $('#signUppwd').val("");
+                $('#signUppwdchk').val("");
+                $('#signUpname').val("");
+
+                signUpModal.modal();
+                return;
+            });
+
+
+        }
+
+        console.log("id : " + id + "\npwd : " + pwd + "\nname : " + name);
 
         // 서버로 post 전송 (ajax)
-        $.post("http://httpbin.org/post", { "id" : id, "pwd" : pwd },
+        $.post("/signup.do", { "id" : id, "pwd" : pwd, "name" : name},
             function(data) {
                 var signUpchkModal = $('#signUpchkModal');
                 var signUpModal = $('#signUpModal');
-                signUpchkModal.modal();
-                signUpchkModal.find('.modal-body').text(data.form.id + '님 회원가입되었습니다.');
-                signUpModal.modal('hide');
+                var myModal = $('#myModal');
+
+                if (data.msg == "success") {
+                    signUpchkModal.modal();
+                    signUpchkModal.find('.modal-body').text(data.name + '님 회원가입되었습니다.');
+                    signUpModal.modal('hide');
+
+                    $("#signupchkmodal").on("hidden.bs.modal", function () {
+                        $('#signUpid').val("");
+                        $('#signUppwd').val("");
+                        $('#signUppwdchk').val("");
+                        $('#signUpname').val("");
+
+                        var modal = $("#signinmodal");
+                        modal.modal();
+                    });
+
+                } else if (data.msg == "error") {
+
+                    myModal.modal();
+                    myModal.find('.modal-title').text('Sign Up Error');
+                    myModal.find('.modal-body').text(data.msg);
+                    loginModal.modal('hide');
+                    $("#myModal").on("hidden.bs.modal", function () {
+                        $('#signUpid').val("");
+                        $('#signUppwd').val("");
+                        $('#signUppwdchk').val("");
+                        $('#signUpname').val("");
+
+                        var modal = $("#signUpModal");
+                        modal.modal();
+                    });
+                }
 
             });          // post방식으로 저 사이트에 post를 보내는데 json형식으로 입력한 값이 들어감
 
@@ -78,15 +100,14 @@ $(document).ready(function () {
         // id, pwd를 가져오기
         var id = $("#signInid").val();
         var pwd = $("#signInpwd").val();
-//            console.log("id : " + id + "\npwd : " + pwd);
-        console.log("id : " + id);
+        console.log("id : " + id + " pwd : " + pwd);
 
         // 서버로 post 전송 (ajax)
-        $.post("/bloglogin", { "id" : id },
+        $.post("/login.do", { "id" : id , "pwd" : pwd },
             function(data) {
                 // console.log(data);
                 if(data.msg == 'success') {
-
+                    console.log(data.name);
                     var loginchkModal = $('#loginchkModal');
                     var signInModal = $('#signInModal');
                     loginchkModal.modal();
@@ -99,24 +120,20 @@ $(document).ready(function () {
 
                 } else if (data.msg == 'error') {
                 // <%-- 회원 가입이 실패한 경우 처리 추가 --%>
+                    console.log(data.msg);
                     var loginModal = $('#signInModal');
                     var myModal = $('#myModal');
                     myModal.modal();
                     myModal.find('.modal-title').text('Sign In Error');
-                    myModal.find('.modal-body').text('Invalid username or password');
+                    myModal.find('.modal-body').text(data.error);
                     loginModal.modal('hide');
                     $("#myModal").on("hidden.bs.modal", function () {
-                        // $(function () {
                         $('#signInpwd').val("");
-                        // });
+
                         var modal = $("#signInModal");
                         modal.modal();
-                        console.log("으알어란아런ㅇ");
                     });
                 }
-//                    var myModal = $('#myModal');
-//                    myModal.modal();
-//                    myModal.find('.modal-body').text(data.id + '님 로그인되었습니다.');
 
             });          // post방식으로 저 사이트에 post를 보내는데 json형식으로 입력한 값이 들어감
 

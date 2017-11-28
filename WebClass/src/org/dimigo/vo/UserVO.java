@@ -2,8 +2,31 @@ package org.dimigo.vo;
 
 public class UserVO {
     private String id;
+    private String pwd;
     private String name;
-    private String nickname;
+
+    public UserVO() {
+
+    }
+
+    public UserVO(String id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public UserVO(String id, String pwd, String name) {
+        this.id = id;
+        this.pwd = pwd;
+        this.name = name;
+    }
+
+    public void setPwd(String pwd) {
+        this.pwd = pwd;
+    }
+
+    public String getPwd() {
+        return pwd;
+    }
 
     public String getId() {
         return id;
@@ -21,11 +44,4 @@ public class UserVO {
         this.name = name;
     }
 
-    public String getNickname() {
-        return nickname;
-    }
-
-    public void setNickname(String nickname) {
-        this.nickname = nickname;
-    }
 }

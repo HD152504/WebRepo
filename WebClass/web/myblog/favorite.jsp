@@ -39,12 +39,7 @@
 <%@ include file="modal.jsp"%>
 
 
-<footer class="footer">
-    <div class="container">
-        <span class="text-muted">Copyright 2017 by Noodle김</span>
-    </div>
-</footer>
-
+<%@ include file="footer.jsp"%>
 <!-- 콘텐츠 -->
 
 <div class="jumbotron">

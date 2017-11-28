@@ -19,11 +19,11 @@
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
-                        <label for="signInid">ID</label><br>
+                        <label for="signInid" class="loginlabel">ID</label><br>
                         <input type="email" class="myinputD" id="signInid" placeholder="Enter Email" required>
                     </div>
                     <div class="form-group">
-                        <label for="signInpwd">Password</label><br>
+                        <label for="signInpwd" class="loginlabel">Password</label><br>
                         <input type="password" class="myinputD" id="signInpwd" placeholder="Password" required>
                     </div>
 

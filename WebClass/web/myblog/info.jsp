@@ -38,25 +38,20 @@
 
 <%@ include file="modal.jsp"%>
 
-
-<footer class="footer">
-    <div class="container">
-        <span class="text-muted">Copyright 2017 by Noodle김</span>
-    </div>
-</footer>
+<%@ include file="footer.jsp"%>
 
 <!-- 콘텐츠 -->
 
 <div class="jumbotron">
     <div class="jumbodiv">
         <h1 class="display-3">Hello, world!</h1>
-        <p class="lead">This is a webpage, which is made by noodleKim.</p>
+        <p class="lead">This is a webpage, which is made by Hyeon.</p>
         <hr class="my-4">
         <p>I made this webpage by using bootstrap. If using bootstrap, it is easy to make well formed webpage.</p>
         <p class="lead">
             <button class="btn btn-outline-dark btn-lg" onclick="alert('Welcome Info!');" id="clickme" role="button">Click Me!</button>
         </p>
-        <br><p>Last Update 2017.09.08</p>
+        <br><p>Last Update 2017.11.21</p>
         <!--<br><p id="clicked"></p>-->
     </div>
 </div>

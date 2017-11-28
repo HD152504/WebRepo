@@ -1,0 +1,77 @@
+body {
+    background-image: none;
+}
+
+
+.bulletincontainer {
+    padding: 3% 5% 3% 5%;
+    margin: 2% auto;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    /*background-color: whitesmoke;*/
+    width: 60%;
+    height: 80%;
+    align-content: center;
+
+}
+
+.bulletinform {
+}
+
+#bulletintitle {
+    float: right;
+    width: 100%;
+    padding: 1.5%;
+    margin-bottom: 30px;
+    border: 1px solid darkgray;
+    border-radius: 3px;
+}
+
+.bulletinlabel {
+    margin-bottom: 20px;
+}
+
+#bulletintext {
+    width: 100%;
+    height: 60%;
+    border: 1px solid darkgray;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+
+#bulletinbutton {
+    padding: 1.2%;
+    float: right;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    width: 15%;
+    margin: 0 auto;
+}
+
+#weatherForm{
+    padding: 3% 5% 3% 5%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+
+.form-group {
+    margin-top: 5px;
+    margin-bottom: 2rem;
+}
+
+.modal-header {
+    margin-bottom: 10px;
+}
+
+.modal-footer {
+    padding-top: 30px;
+}
+
+.myinputD {
+    padding: 2%;
+}
+
+.loginlabel {
+        font-size: 15px;
+}

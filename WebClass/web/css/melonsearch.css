@@ -1,0 +1,33 @@
+body {
+    /*background-image: url("../image/pic1.jpg");*/
+    /*background-size: cover;*/
+}
+
+
+
+#melonform{
+    /*padding: 3% 5% 3% 5%;*/
+    /*margin-top: 0px;*/
+    /*margin-bottom: 0px;*/
+    /*margin: 10% auto;*/
+    /*display: flex;*/
+
+    padding: 3%;
+}
+
+.melonsearch {
+    /*padding: 5%;*/
+    margin: 50px auto;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    /*background-color: whitesmoke;*/
+    width: 60%;
+    height: 80%;
+    /*align-content: center;*/
+
+}
+
+.custom-select {
+
+}
+

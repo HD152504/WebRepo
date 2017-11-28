@@ -7,6 +7,7 @@
 --%>
 <%@ page language="java" %>
 <%@ page import = "java.util.Calendar" %>
+<link rel="stylesheet" href="../css/footer.css">
 <%
     Calendar c = Calendar.getInstance();
 %>

@@ -18,14 +18,15 @@ body {
     background-color: #f5f5f5;
 }
 
+
 /* Custom page CSS
 -------------------------------------------------- */
 /* Not required for template or sticky footer method. */
 
-.container {
+div.container {
     width: auto;
     max-width: 680px;
-    padding: 0 15px;
+    padding: 0 0px;
 }
 
 .form-control, btn-outline-success {
